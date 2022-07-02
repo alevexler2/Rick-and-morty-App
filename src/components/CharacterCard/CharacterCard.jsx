@@ -1,6 +1,7 @@
 import React from "react";
 
 function CharacterCard(props){
+  
   const{name , image, species, gender } = props.personaje;
 
   return(

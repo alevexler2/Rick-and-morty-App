@@ -4,7 +4,7 @@ import styles from './CategoryCard.module.css';
 function CategoryCard(props){
  const { imgEpisodio, section, urlSection, animation } = props.section;
  const navigate = useNavigate();
- console.log(navigate);
+ 
   
   return(
     <div className={`container-fluid ${animation} w-75`}>

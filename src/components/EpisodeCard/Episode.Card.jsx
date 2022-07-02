@@ -1,7 +1,6 @@
 import React from "react";
 
 function EpisodeCard(props){
-    console.log(props.episodio);
   const{ name } = props.episodio;
 
   return(

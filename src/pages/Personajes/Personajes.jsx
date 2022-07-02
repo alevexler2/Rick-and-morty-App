@@ -7,7 +7,6 @@ import clientAxios from "../../config/clientAxios";
 function Personajes(){
   let[personajes, setPersonajes] = useState([]);
   const getData = ()=>{
-    console.log(process.env.REACT_APP_URL_BASE);
     clientAxios.get("character")
       .then(response => {
         setPersonajes(personajes = response.data.results)
@@ -39,7 +38,7 @@ function Personajes(){
           <div className="container col-12 animate__animated animate__zoomIn">
             <div className="row justify-content-center">
               
-                {personajes.map(personaje=><CharacterCard personaje={personaje} />)}
+                {personajes.map(personaje=><CharacterCard key={personaje.id} personaje={personaje} />)}
               
             </div>
           </div>
